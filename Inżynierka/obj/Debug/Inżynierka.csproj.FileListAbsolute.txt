@@ -1,0 +1,99 @@
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\Inżynierka.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\Inżynierka.pdb
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\Antlr3.Runtime.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\AspNet.ScriptManager.jQuery.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\DotNetOpenAuth.AspNet.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\DotNetOpenAuth.Core.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\DotNetOpenAuth.OAuth.Consumer.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\DotNetOpenAuth.OAuth.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\DotNetOpenAuth.OpenId.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\EntityFramework.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\Microsoft.ScriptManager.MSAjax.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\Microsoft.ScriptManager.WebForms.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\Microsoft.Web.Infrastructure.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\System.Web.Optimization.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\System.Web.Providers.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\WebGrease.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\EntityFramework.xml
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\DotNetOpenAuth.Core.xml
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\DotNetOpenAuth.OAuth.xml
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\DotNetOpenAuth.OAuth.Consumer.xml
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\DotNetOpenAuth.OpenId.xml
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\DotNetOpenAuth.AspNet.xml
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\obj\Debug\Inżynierka.csprojResolveAssemblyReference.cache
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\obj\Debug\Inżynierka.dll
+c:\users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\obj\Debug\Inżynierka.pdb
+C:\Users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\Default.aspx
+C:\Users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\Default.aspx.cs
+C:\Users\laptop\documents\visual studio 2012\Projects\Inżynierka\Inżynierka\bin\Default.aspx.designer.cs
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\obj\Debug\Inżynierka.csprojResolveAssemblyReference.cache
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\obj\Debug\Inżynierka.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\Default.aspx
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\Default.aspx.cs
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\Default.aspx.designer.cs
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\Inżynierka.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\Inżynierka.pdb
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\Antlr3.Runtime.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.Core.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\EntityFramework.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\System.Web.Optimization.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\System.Web.Providers.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\WebGrease.dll
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\EntityFramework.xml
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.Core.xml
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Anna\Desktop\Inżynierka2\Inżynierka\obj\Debug\Inżynierka.pdb
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\Default.aspx
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\Default.aspx.cs
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\Default.aspx.designer.cs
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\Inżynierka.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\Inżynierka.pdb
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\Antlr3.Runtime.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.Core.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\EntityFramework.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\System.Web.Optimization.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\System.Web.Providers.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\WebGrease.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\EntityFramework.xml
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.Core.xml
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\obj\Debug\Inżynierka.csprojResolveAssemblyReference.cache
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\obj\Debug\Inżynierka.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\Inżynierka\obj\Debug\Inżynierka.pdb

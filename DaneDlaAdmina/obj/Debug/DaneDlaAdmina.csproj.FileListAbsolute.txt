@@ -1,0 +1,5 @@
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\DaneDlaAdmina\bin\DaneDlaAdmina.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\DaneDlaAdmina\bin\DaneDlaAdmina.pdb
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\DaneDlaAdmina\obj\Debug\DaneDlaAdmina.csprojResolveAssemblyReference.cache
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\DaneDlaAdmina\obj\Debug\DaneDlaAdmina.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\DaneDlaAdmina\obj\Debug\DaneDlaAdmina.pdb

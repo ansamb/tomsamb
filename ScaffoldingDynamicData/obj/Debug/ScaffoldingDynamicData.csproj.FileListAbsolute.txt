@@ -1,0 +1,5 @@
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\ScaffoldingDynamicData\bin\ScaffoldingDynamicData.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\ScaffoldingDynamicData\bin\ScaffoldingDynamicData.pdb
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\ScaffoldingDynamicData\obj\Debug\ScaffoldingDynamicData.csprojResolveAssemblyReference.cache
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\ScaffoldingDynamicData\obj\Debug\ScaffoldingDynamicData.dll
+C:\Users\laptop\Documents\Visual Studio 2012\Projects\Inżynierka2\ScaffoldingDynamicData\obj\Debug\ScaffoldingDynamicData.pdb

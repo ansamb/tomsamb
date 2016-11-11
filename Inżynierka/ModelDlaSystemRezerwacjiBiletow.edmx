@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SystemRezerwacjiBiletowModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SystemRezerwacjiBiletowModelStoreContainer">
+          <EntitySet Name="DaneUzytkownikow" EntityType="SystemRezerwacjiBiletowModel.Store.DaneUzytkownikow" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GodzinyRozkladowLotow" EntityType="SystemRezerwacjiBiletowModel.Store.GodzinyRozkladowLotow" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MiasPrzy" EntityType="SystemRezerwacjiBiletowModel.Store.MiasPrzy" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MIASTA" EntityType="SystemRezerwacjiBiletowModel.Store.MIASTA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MiasWylo" EntityType="SystemRezerwacjiBiletowModel.Store.MiasWylo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Parametry" EntityType="SystemRezerwacjiBiletowModel.Store.Parametry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Parametry2" EntityType="SystemRezerwacjiBiletowModel.Store.Parametry2" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TypyPołączenia" EntityType="SystemRezerwacjiBiletowModel.Store.TypyPołączenia" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDmiasta" Association="SystemRezerwacjiBiletowModel.Store.fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDmiasta">
+            <End Role="MIASTA" EntitySet="MIASTA" />
+            <End Role="GodzinyRozkladowLotow" EntitySet="GodzinyRozkladowLotow" />
+          </AssociationSet>
+          <AssociationSet Name="fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDTypyPołączenia" Association="SystemRezerwacjiBiletowModel.Store.fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDTypyPołączenia">
+            <End Role="TypyPołączenia" EntitySet="TypyPołączenia" />
+            <End Role="GodzinyRozkladowLotow" EntitySet="GodzinyRozkladowLotow" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IDMiasWyl" Association="SystemRezerwacjiBiletowModel.Store.fk_IDMiasWyl">
+            <End Role="MiasWylo" EntitySet="MiasWylo" />
+            <End Role="MiasPrzy" EntitySet="MiasPrzy" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DaneUzytkownikow">
+          <Key>
+            <PropertyRef Name="IDUzytkownikow" />
+          </Key>
+          <Property Name="Imie" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Nazwisko" Type="varchar" MaxLength="50" />
+          <Property Name="E-mail" Type="varchar" MaxLength="50" />
+          <Property Name="E-mailPotwierdzający" Type="varchar" MaxLength="50" />
+          <Property Name="Komentarz" Type="varchar" MaxLength="1000" />
+          <Property Name="IDUzytkownikow" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="GodzinyRozkladowLotow">
+          <Key>
+            <PropertyRef Name="IDgodziny" />
+          </Key>
+          <Property Name="IDgodziny" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="godzinyPoranne" Type="nvarchar" MaxLength="5" />
+          <Property Name="godzinyWieczorne" Type="nvarchar" MaxLength="5" />
+          <Property Name="IDmiasta" Type="nvarchar" MaxLength="1" />
+          <Property Name="IDTypyPołączenia" Type="int" />
+        </EntityType>
+        <EntityType Name="MiasPrzy">
+          <Key>
+            <PropertyRef Name="IDMiasPrz" />
+          </Key>
+          <Property Name="IDMiasPrz" Type="int" Nullable="false" />
+          <Property Name="IDMiasWyl" Type="int" />
+          <Property Name="MiasPrz" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="MIASTA">
+          <Key>
+            <PropertyRef Name="IDmiasta" />
+          </Key>
+          <Property Name="IDmiasta" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="miasto" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MiasWylo">
+          <Key>
+            <PropertyRef Name="IDMiasWyl" />
+          </Key>
+          <Property Name="IDMiasWyl" Type="int" Nullable="false" />
+          <Property Name="MiasWyl" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Parametry">
+          <Key>
+            <PropertyRef Name="IDPolaczenia" />
+          </Key>
+          <Property Name="IDPolaczenia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MiastoWylotu" Type="nvarchar" MaxLength="20" />
+          <Property Name="MiastoPrzylotu" Type="nvarchar" MaxLength="20" />
+          <Property Name="Odleglosc" Type="int" />
+          <Property Name="Cena" Type="int" />
+          <Property Name="Linia" Type="nvarchar" MaxLength="2" />
+          <Property Name="GodzinaWylotu" Type="nvarchar" MaxLength="20" />
+          <Property Name="GodzinaPrzylotu" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Parametry2">
+          <Key>
+            <PropertyRef Name="IDPolaczenia" />
+          </Key>
+          <Property Name="IDPolaczenia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MiastoWylotu" Type="nvarchar" MaxLength="20" />
+          <Property Name="MiastoPrzylotu" Type="nvarchar" MaxLength="20" />
+          <Property Name="Odleglosc" Type="int" />
+          <Property Name="Cena" Type="int" />
+          <Property Name="Linia" Type="nvarchar" MaxLength="2" />
+          <Property Name="GodzinaWylotu" Type="nvarchar" MaxLength="20" />
+          <Property Name="GodzinaPrzylotu" Type="nvarchar" MaxLength="20" />
+          <Property Name="Data" Type="date" />
+          <Property Name="IloscMiejsc" Type="int" />
+        </EntityType>
+        <EntityType Name="TypyPołączenia">
+          <Key>
+            <PropertyRef Name="IDTypyPołączenia" />
+          </Key>
+          <Property Name="IDTypyPołączenia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TypPołączenia" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDmiasta">
+          <End Role="MIASTA" Type="SystemRezerwacjiBiletowModel.Store.MIASTA" Multiplicity="0..1" />
+          <End Role="GodzinyRozkladowLotow" Type="SystemRezerwacjiBiletowModel.Store.GodzinyRozkladowLotow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MIASTA">
+              <PropertyRef Name="IDmiasta" />
+            </Principal>
+            <Dependent Role="GodzinyRozkladowLotow">
+              <PropertyRef Name="IDmiasta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDTypyPołączenia">
+          <End Role="TypyPołączenia" Type="SystemRezerwacjiBiletowModel.Store.TypyPołączenia" Multiplicity="0..1" />
+          <End Role="GodzinyRozkladowLotow" Type="SystemRezerwacjiBiletowModel.Store.GodzinyRozkladowLotow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypyPołączenia">
+              <PropertyRef Name="IDTypyPołączenia" />
+            </Principal>
+            <Dependent Role="GodzinyRozkladowLotow">
+              <PropertyRef Name="IDTypyPołączenia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IDMiasWyl">
+          <End Role="MiasWylo" Type="SystemRezerwacjiBiletowModel.Store.MiasWylo" Multiplicity="0..1" />
+          <End Role="MiasPrzy" Type="SystemRezerwacjiBiletowModel.Store.MiasPrzy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiasWylo">
+              <PropertyRef Name="IDMiasWyl" />
+            </Principal>
+            <Dependent Role="MiasPrzy">
+              <PropertyRef Name="IDMiasWyl" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SystemRezerwacjiBiletowModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SystemRezerwacjiBiletowEntities5" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="DaneUzytkownikow" EntityType="SystemRezerwacjiBiletowModel.DaneUzytkownikow" />
+          <EntitySet Name="GodzinyRozkladowLotow" EntityType="SystemRezerwacjiBiletowModel.GodzinyRozkladowLotow" />
+          <EntitySet Name="MiasPrzy" EntityType="SystemRezerwacjiBiletowModel.MiasPrzy" />
+          <EntitySet Name="MIASTA" EntityType="SystemRezerwacjiBiletowModel.MIASTA" />
+          <EntitySet Name="MiasWylo" EntityType="SystemRezerwacjiBiletowModel.MiasWylo" />
+          <EntitySet Name="Parametry" EntityType="SystemRezerwacjiBiletowModel.Parametry" />
+          <EntitySet Name="Parametry2" EntityType="SystemRezerwacjiBiletowModel.Parametry2" />
+          <EntitySet Name="TypyPołączenia" EntityType="SystemRezerwacjiBiletowModel.TypyPołączenia" />
+          <AssociationSet Name="fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDmiasta" Association="SystemRezerwacjiBiletowModel.fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDmiasta">
+            <End Role="MIASTA" EntitySet="MIASTA" />
+            <End Role="GodzinyRozkladowLotow" EntitySet="GodzinyRozkladowLotow" />
+          </AssociationSet>
+          <AssociationSet Name="fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDTypyPołączenia" Association="SystemRezerwacjiBiletowModel.fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDTypyPołączenia">
+            <End Role="TypyPołączenia" EntitySet="TypyPołączenia" />
+            <End Role="GodzinyRozkladowLotow" EntitySet="GodzinyRozkladowLotow" />
+          </AssociationSet>
+          <AssociationSet Name="fk_IDMiasWyl" Association="SystemRezerwacjiBiletowModel.fk_IDMiasWyl">
+            <End Role="MiasWylo" EntitySet="MiasWylo" />
+            <End Role="MiasPrzy" EntitySet="MiasPrzy" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DaneUzytkownikow">
+          <Key>
+            <PropertyRef Name="IDUzytkownikow" />
+          </Key>
+          <Property Name="Imie" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Nazwisko" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="E_mail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="E_mailPotwierdzający" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Komentarz" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="IDUzytkownikow" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="GodzinyRozkladowLotow">
+          <Key>
+            <PropertyRef Name="IDgodziny" />
+          </Key>
+          <Property Name="IDgodziny" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="godzinyPoranne" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="godzinyWieczorne" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="IDmiasta" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="IDTypyPołączenia" Type="Int32" />
+          <NavigationProperty Name="MIASTA" Relationship="SystemRezerwacjiBiletowModel.fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDmiasta" FromRole="GodzinyRozkladowLotow" ToRole="MIASTA" />
+          <NavigationProperty Name="TypyPołączenia" Relationship="SystemRezerwacjiBiletowModel.fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDTypyPołączenia" FromRole="GodzinyRozkladowLotow" ToRole="TypyPołączenia" />
+        </EntityType>
+        <EntityType Name="MiasPrzy">
+          <Key>
+            <PropertyRef Name="IDMiasPrz" />
+          </Key>
+          <Property Name="IDMiasPrz" Type="Int32" Nullable="false" />
+          <Property Name="IDMiasWyl" Type="Int32" />
+          <Property Name="MiasPrz" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MiasWylo" Relationship="SystemRezerwacjiBiletowModel.fk_IDMiasWyl" FromRole="MiasPrzy" ToRole="MiasWylo" />
+        </EntityType>
+        <EntityType Name="MIASTA">
+          <Key>
+            <PropertyRef Name="IDmiasta" />
+          </Key>
+          <Property Name="IDmiasta" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="miasto" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="GodzinyRozkladowLotow" Relationship="SystemRezerwacjiBiletowModel.fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDmiasta" FromRole="MIASTA" ToRole="GodzinyRozkladowLotow" />
+        </EntityType>
+        <EntityType Name="MiasWylo">
+          <Key>
+            <PropertyRef Name="IDMiasWyl" />
+          </Key>
+          <Property Name="IDMiasWyl" Type="Int32" Nullable="false" />
+          <Property Name="MiasWyl" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MiasPrzy" Relationship="SystemRezerwacjiBiletowModel.fk_IDMiasWyl" FromRole="MiasWylo" ToRole="MiasPrzy" />
+        </EntityType>
+        <EntityType Name="Parametry">
+          <Key>
+            <PropertyRef Name="IDPolaczenia" />
+          </Key>
+          <Property Name="IDPolaczenia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MiastoWylotu" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="MiastoPrzylotu" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Odleglosc" Type="Int32" />
+          <Property Name="Cena" Type="Int32" />
+          <Property Name="Linia" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="GodzinaWylotu" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="GodzinaPrzylotu" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Parametry2">
+          <Key>
+            <PropertyRef Name="IDPolaczenia" />
+          </Key>
+          <Property Name="IDPolaczenia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MiastoWylotu" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="MiastoPrzylotu" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Odleglosc" Type="Int32" />
+          <Property Name="Cena" Type="Int32" />
+          <Property Name="Linia" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="GodzinaWylotu" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="GodzinaPrzylotu" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Data" Type="DateTime" Precision="0" />
+          <Property Name="IloscMiejsc" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TypyPołączenia">
+          <Key>
+            <PropertyRef Name="IDTypyPołączenia" />
+          </Key>
+          <Property Name="IDTypyPołączenia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TypPołączenia" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="GodzinyRozkladowLotow" Relationship="SystemRezerwacjiBiletowModel.fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDTypyPołączenia" FromRole="TypyPołączenia" ToRole="GodzinyRozkladowLotow" />
+        </EntityType>
+        <Association Name="fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDmiasta">
+          <End Role="MIASTA" Type="SystemRezerwacjiBiletowModel.MIASTA" Multiplicity="0..1" />
+          <End Role="GodzinyRozkladowLotow" Type="SystemRezerwacjiBiletowModel.GodzinyRozkladowLotow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MIASTA">
+              <PropertyRef Name="IDmiasta" />
+            </Principal>
+            <Dependent Role="GodzinyRozkladowLotow">
+              <PropertyRef Name="IDmiasta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDTypyPołączenia">
+          <End Role="TypyPołączenia" Type="SystemRezerwacjiBiletowModel.TypyPołączenia" Multiplicity="0..1" />
+          <End Role="GodzinyRozkladowLotow" Type="SystemRezerwacjiBiletowModel.GodzinyRozkladowLotow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypyPołączenia">
+              <PropertyRef Name="IDTypyPołączenia" />
+            </Principal>
+            <Dependent Role="GodzinyRozkladowLotow">
+              <PropertyRef Name="IDTypyPołączenia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_IDMiasWyl">
+          <End Role="MiasWylo" Type="SystemRezerwacjiBiletowModel.MiasWylo" Multiplicity="0..1" />
+          <End Role="MiasPrzy" Type="SystemRezerwacjiBiletowModel.MiasPrzy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiasWylo">
+              <PropertyRef Name="IDMiasWyl" />
+            </Principal>
+            <Dependent Role="MiasPrzy">
+              <PropertyRef Name="IDMiasWyl" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SystemRezerwacjiBiletowModelStoreContainer" CdmEntityContainer="SystemRezerwacjiBiletowEntities5">
+          <EntitySetMapping Name="DaneUzytkownikow">
+            <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.DaneUzytkownikow">
+              <MappingFragment StoreEntitySet="DaneUzytkownikow">
+                <ScalarProperty Name="Imie" ColumnName="Imie" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+                <ScalarProperty Name="E_mailPotwierdzający" ColumnName="E-mailPotwierdzający" />
+                <ScalarProperty Name="Komentarz" ColumnName="Komentarz" />
+                <ScalarProperty Name="IDUzytkownikow" ColumnName="IDUzytkownikow" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GodzinyRozkladowLotow">
+            <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.GodzinyRozkladowLotow">
+              <MappingFragment StoreEntitySet="GodzinyRozkladowLotow">
+                <ScalarProperty Name="IDgodziny" ColumnName="IDgodziny" />
+                <ScalarProperty Name="godzinyPoranne" ColumnName="godzinyPoranne" />
+                <ScalarProperty Name="godzinyWieczorne" ColumnName="godzinyWieczorne" />
+                <ScalarProperty Name="IDmiasta" ColumnName="IDmiasta" />
+                <ScalarProperty Name="IDTypyPołączenia" ColumnName="IDTypyPołączenia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiasPrzy">
+            <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.MiasPrzy">
+              <MappingFragment StoreEntitySet="MiasPrzy">
+                <ScalarProperty Name="IDMiasPrz" ColumnName="IDMiasPrz" />
+                <ScalarProperty Name="IDMiasWyl" ColumnName="IDMiasWyl" />
+                <ScalarProperty Name="MiasPrz" ColumnName="MiasPrz" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MIASTA">
+            <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.MIASTA">
+              <MappingFragment StoreEntitySet="MIASTA">
+                <ScalarProperty Name="IDmiasta" ColumnName="IDmiasta" />
+                <ScalarProperty Name="miasto" ColumnName="miasto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiasWylo">
+            <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.MiasWylo">
+              <MappingFragment StoreEntitySet="MiasWylo">
+                <ScalarProperty Name="IDMiasWyl" ColumnName="IDMiasWyl" />
+                <ScalarProperty Name="MiasWyl" ColumnName="MiasWyl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parametry">
+            <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.Parametry">
+              <MappingFragment StoreEntitySet="Parametry">
+                <ScalarProperty Name="IDPolaczenia" ColumnName="IDPolaczenia" />
+                <ScalarProperty Name="MiastoWylotu" ColumnName="MiastoWylotu" />
+                <ScalarProperty Name="MiastoPrzylotu" ColumnName="MiastoPrzylotu" />
+                <ScalarProperty Name="Odleglosc" ColumnName="Odleglosc" />
+                <ScalarProperty Name="Cena" ColumnName="Cena" />
+                <ScalarProperty Name="Linia" ColumnName="Linia" />
+                <ScalarProperty Name="GodzinaWylotu" ColumnName="GodzinaWylotu" />
+                <ScalarProperty Name="GodzinaPrzylotu" ColumnName="GodzinaPrzylotu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parametry2">
+            <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.Parametry2">
+              <MappingFragment StoreEntitySet="Parametry2">
+                <ScalarProperty Name="IDPolaczenia" ColumnName="IDPolaczenia" />
+                <ScalarProperty Name="MiastoWylotu" ColumnName="MiastoWylotu" />
+                <ScalarProperty Name="MiastoPrzylotu" ColumnName="MiastoPrzylotu" />
+                <ScalarProperty Name="Odleglosc" ColumnName="Odleglosc" />
+                <ScalarProperty Name="Cena" ColumnName="Cena" />
+                <ScalarProperty Name="Linia" ColumnName="Linia" />
+                <ScalarProperty Name="GodzinaWylotu" ColumnName="GodzinaWylotu" />
+                <ScalarProperty Name="GodzinaPrzylotu" ColumnName="GodzinaPrzylotu" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="IloscMiejsc" ColumnName="IloscMiejsc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypyPołączenia">
+            <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.TypyPołączenia">
+              <MappingFragment StoreEntitySet="TypyPołączenia">
+                <ScalarProperty Name="IDTypyPołączenia" ColumnName="IDTypyPołączenia" />
+                <ScalarProperty Name="TypPołączenia" ColumnName="TypPołączenia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

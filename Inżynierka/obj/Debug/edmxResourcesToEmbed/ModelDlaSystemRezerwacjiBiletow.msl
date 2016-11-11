@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SystemRezerwacjiBiletowModelStoreContainer" CdmEntityContainer="SystemRezerwacjiBiletowEntities5">
+    <EntitySetMapping Name="DaneUzytkownikow">
+      <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.DaneUzytkownikow">
+        <MappingFragment StoreEntitySet="DaneUzytkownikow">
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+          <ScalarProperty Name="E_mailPotwierdzający" ColumnName="E-mailPotwierdzający" />
+          <ScalarProperty Name="Komentarz" ColumnName="Komentarz" />
+          <ScalarProperty Name="IDUzytkownikow" ColumnName="IDUzytkownikow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GodzinyRozkladowLotow">
+      <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.GodzinyRozkladowLotow">
+        <MappingFragment StoreEntitySet="GodzinyRozkladowLotow">
+          <ScalarProperty Name="IDgodziny" ColumnName="IDgodziny" />
+          <ScalarProperty Name="godzinyPoranne" ColumnName="godzinyPoranne" />
+          <ScalarProperty Name="godzinyWieczorne" ColumnName="godzinyWieczorne" />
+          <ScalarProperty Name="IDmiasta" ColumnName="IDmiasta" />
+          <ScalarProperty Name="IDTypyPołączenia" ColumnName="IDTypyPołączenia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiasPrzy">
+      <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.MiasPrzy">
+        <MappingFragment StoreEntitySet="MiasPrzy">
+          <ScalarProperty Name="IDMiasPrz" ColumnName="IDMiasPrz" />
+          <ScalarProperty Name="IDMiasWyl" ColumnName="IDMiasWyl" />
+          <ScalarProperty Name="MiasPrz" ColumnName="MiasPrz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MIASTA">
+      <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.MIASTA">
+        <MappingFragment StoreEntitySet="MIASTA">
+          <ScalarProperty Name="IDmiasta" ColumnName="IDmiasta" />
+          <ScalarProperty Name="miasto" ColumnName="miasto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiasWylo">
+      <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.MiasWylo">
+        <MappingFragment StoreEntitySet="MiasWylo">
+          <ScalarProperty Name="IDMiasWyl" ColumnName="IDMiasWyl" />
+          <ScalarProperty Name="MiasWyl" ColumnName="MiasWyl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parametry">
+      <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.Parametry">
+        <MappingFragment StoreEntitySet="Parametry">
+          <ScalarProperty Name="IDPolaczenia" ColumnName="IDPolaczenia" />
+          <ScalarProperty Name="MiastoWylotu" ColumnName="MiastoWylotu" />
+          <ScalarProperty Name="MiastoPrzylotu" ColumnName="MiastoPrzylotu" />
+          <ScalarProperty Name="Odleglosc" ColumnName="Odleglosc" />
+          <ScalarProperty Name="Cena" ColumnName="Cena" />
+          <ScalarProperty Name="Linia" ColumnName="Linia" />
+          <ScalarProperty Name="GodzinaWylotu" ColumnName="GodzinaWylotu" />
+          <ScalarProperty Name="GodzinaPrzylotu" ColumnName="GodzinaPrzylotu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parametry2">
+      <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.Parametry2">
+        <MappingFragment StoreEntitySet="Parametry2">
+          <ScalarProperty Name="IDPolaczenia" ColumnName="IDPolaczenia" />
+          <ScalarProperty Name="MiastoWylotu" ColumnName="MiastoWylotu" />
+          <ScalarProperty Name="MiastoPrzylotu" ColumnName="MiastoPrzylotu" />
+          <ScalarProperty Name="Odleglosc" ColumnName="Odleglosc" />
+          <ScalarProperty Name="Cena" ColumnName="Cena" />
+          <ScalarProperty Name="Linia" ColumnName="Linia" />
+          <ScalarProperty Name="GodzinaWylotu" ColumnName="GodzinaWylotu" />
+          <ScalarProperty Name="GodzinaPrzylotu" ColumnName="GodzinaPrzylotu" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IloscMiejsc" ColumnName="IloscMiejsc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypyPołączenia">
+      <EntityTypeMapping TypeName="SystemRezerwacjiBiletowModel.TypyPołączenia">
+        <MappingFragment StoreEntitySet="TypyPołączenia">
+          <ScalarProperty Name="IDTypyPołączenia" ColumnName="IDTypyPołączenia" />
+          <ScalarProperty Name="TypPołączenia" ColumnName="TypPołączenia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

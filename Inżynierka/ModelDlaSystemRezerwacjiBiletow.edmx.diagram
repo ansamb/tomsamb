@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d2e7973dbea74d298be4b0c5bd0ce52e" Name="Diagram1">
+        <EntityTypeShape EntityType="SystemRezerwacjiBiletowModel.DaneUzytkownikow" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SystemRezerwacjiBiletowModel.GodzinyRozkladowLotow" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SystemRezerwacjiBiletowModel.MiasPrzy" Width="1.5" PointX="5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SystemRezerwacjiBiletowModel.MIASTA" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SystemRezerwacjiBiletowModel.MiasWylo" Width="1.5" PointX="2.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SystemRezerwacjiBiletowModel.Parametry" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SystemRezerwacjiBiletowModel.Parametry2" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SystemRezerwacjiBiletowModel.TypyPołączenia" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="SystemRezerwacjiBiletowModel.fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDmiasta" ManuallyRouted="false" />
+        <AssociationConnector Association="SystemRezerwacjiBiletowModel.fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDTypyPołączenia" ManuallyRouted="false" />
+        <AssociationConnector Association="SystemRezerwacjiBiletowModel.fk_IDMiasWyl" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

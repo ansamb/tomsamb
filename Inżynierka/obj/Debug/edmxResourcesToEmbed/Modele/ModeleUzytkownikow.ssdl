@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SystemRezerwacjiBiletowModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SystemRezerwacjiBiletowModelStoreContainer">
+    <EntitySet Name="DaneUzytkownikow" EntityType="SystemRezerwacjiBiletowModel.Store.DaneUzytkownikow" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GodzinyRozkladowLotow" EntityType="SystemRezerwacjiBiletowModel.Store.GodzinyRozkladowLotow" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MiasPrzy" EntityType="SystemRezerwacjiBiletowModel.Store.MiasPrzy" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MIASTA" EntityType="SystemRezerwacjiBiletowModel.Store.MIASTA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MiasWylo" EntityType="SystemRezerwacjiBiletowModel.Store.MiasWylo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Parametry2" EntityType="SystemRezerwacjiBiletowModel.Store.Parametry2" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TypyPołączenia" EntityType="SystemRezerwacjiBiletowModel.Store.TypyPołączenia" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDmiasta" Association="SystemRezerwacjiBiletowModel.Store.fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDmiasta">
+      <End Role="MIASTA" EntitySet="MIASTA" />
+      <End Role="GodzinyRozkladowLotow" EntitySet="GodzinyRozkladowLotow" />
+    </AssociationSet>
+    <AssociationSet Name="fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDTypyPołączenia" Association="SystemRezerwacjiBiletowModel.Store.fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDTypyPołączenia">
+      <End Role="TypyPołączenia" EntitySet="TypyPołączenia" />
+      <End Role="GodzinyRozkladowLotow" EntitySet="GodzinyRozkladowLotow" />
+    </AssociationSet>
+    <AssociationSet Name="fk_IDMiasWyl" Association="SystemRezerwacjiBiletowModel.Store.fk_IDMiasWyl">
+      <End Role="MiasWylo" EntitySet="MiasWylo" />
+      <End Role="MiasPrzy" EntitySet="MiasPrzy" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DaneUzytkownikow">
+    <Key>
+      <PropertyRef Name="IDUzytkownikow" />
+    </Key>
+    <Property Name="Imie" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Nazwisko" Type="varchar" MaxLength="50" />
+    <Property Name="E-mail" Type="varchar" MaxLength="50" />
+    <Property Name="E-mailPotwierdzający" Type="varchar" MaxLength="50" />
+    <Property Name="Komentarz" Type="varchar" MaxLength="1000" />
+    <Property Name="IDUzytkownikow" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="GodzinyRozkladowLotow">
+    <Key>
+      <PropertyRef Name="IDgodziny" />
+    </Key>
+    <Property Name="IDgodziny" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="godzinyPoranne" Type="nvarchar" MaxLength="5" />
+    <Property Name="godzinyWieczorne" Type="nvarchar" MaxLength="5" />
+    <Property Name="IDmiasta" Type="nvarchar" MaxLength="1" />
+    <Property Name="IDTypyPołączenia" Type="int" />
+  </EntityType>
+  <EntityType Name="MiasPrzy">
+    <Key>
+      <PropertyRef Name="IDMiasPrz" />
+    </Key>
+    <Property Name="IDMiasPrz" Type="int" Nullable="false" />
+    <Property Name="IDMiasWyl" Type="int" />
+    <Property Name="MiasPrz" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="MIASTA">
+    <Key>
+      <PropertyRef Name="IDmiasta" />
+    </Key>
+    <Property Name="IDmiasta" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="miasto" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MiasWylo">
+    <Key>
+      <PropertyRef Name="IDMiasWyl" />
+    </Key>
+    <Property Name="IDMiasWyl" Type="int" Nullable="false" />
+    <Property Name="MiasWyl" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Parametry2">
+    <Key>
+      <PropertyRef Name="IDPolaczenia" />
+    </Key>
+    <Property Name="IDPolaczenia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MiastoWylotu" Type="nvarchar" MaxLength="20" />
+    <Property Name="MiastoPrzylotu" Type="nvarchar" MaxLength="20" />
+    <Property Name="Odleglosc" Type="int" />
+    <Property Name="Cena" Type="int" />
+    <Property Name="Linia" Type="nvarchar" MaxLength="2" />
+    <Property Name="GodzinaWylotu" Type="nvarchar" MaxLength="20" />
+    <Property Name="GodzinaPrzylotu" Type="nvarchar" MaxLength="20" />
+    <Property Name="Data" Type="date" />
+    <Property Name="IloscMiejsc" Type="int" />
+  </EntityType>
+  <EntityType Name="TypyPołączenia">
+    <Key>
+      <PropertyRef Name="IDTypyPołączenia" />
+    </Key>
+    <Property Name="IDTypyPołączenia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TypPołączenia" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDmiasta">
+    <End Role="MIASTA" Type="SystemRezerwacjiBiletowModel.Store.MIASTA" Multiplicity="0..1" />
+    <End Role="GodzinyRozkladowLotow" Type="SystemRezerwacjiBiletowModel.Store.GodzinyRozkladowLotow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MIASTA">
+        <PropertyRef Name="IDmiasta" />
+      </Principal>
+      <Dependent Role="GodzinyRozkladowLotow">
+        <PropertyRef Name="IDmiasta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_GodzinyRozkladowLotow_To_TypyPołączenia_On_IDTypyPołączenia">
+    <End Role="TypyPołączenia" Type="SystemRezerwacjiBiletowModel.Store.TypyPołączenia" Multiplicity="0..1" />
+    <End Role="GodzinyRozkladowLotow" Type="SystemRezerwacjiBiletowModel.Store.GodzinyRozkladowLotow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypyPołączenia">
+        <PropertyRef Name="IDTypyPołączenia" />
+      </Principal>
+      <Dependent Role="GodzinyRozkladowLotow">
+        <PropertyRef Name="IDTypyPołączenia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_IDMiasWyl">
+    <End Role="MiasWylo" Type="SystemRezerwacjiBiletowModel.Store.MiasWylo" Multiplicity="0..1" />
+    <End Role="MiasPrzy" Type="SystemRezerwacjiBiletowModel.Store.MiasPrzy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MiasWylo">
+        <PropertyRef Name="IDMiasWyl" />
+      </Principal>
+      <Dependent Role="MiasPrzy">
+        <PropertyRef Name="IDMiasWyl" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
